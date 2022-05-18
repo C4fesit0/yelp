@@ -49,7 +49,7 @@ app.get("/api/v1/restaurants/:id", async (req,res)=>{
             status:"succes",
             results: result.rowCount,
             data:{
-                restaurant:result.rows[0],
+                restaurants:result.rows[0],
             },
         });
     }catch(err){

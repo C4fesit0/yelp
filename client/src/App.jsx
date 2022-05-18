@@ -11,15 +11,15 @@ const App=() =>{
 
     return(
         <RestaurantsContextProvider>
-            <div className="container">
-        <Router>
-            <Routes>
-            <Route exact path="/" element={<Home/>} />
-            <Route exact path="/restaurants/:id" element={<RestaurantDetailPage/>} />
-            <Route exact path="/restaurants/:id/update" element={<Update/>} />
-            </Routes>
-        </Router>
-    </div>
+                <div className="container">
+            <Router>
+                <Routes>
+                    <Route exact path="/" element={<Home/>} />
+                    <Route exact path="/restaurants/:id" element={<RestaurantDetailPage/>} />
+                    <Route exact path="/restaurants/:id/update" element={<Update/>} />
+                </Routes>
+            </Router>
+                </div>
         </RestaurantsContextProvider>
         
     );

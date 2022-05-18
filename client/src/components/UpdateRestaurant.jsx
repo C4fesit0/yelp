@@ -14,10 +14,10 @@ export const UpdateRestaurant = (props) => {
     useEffect(()=>{
         const fetchData= async() => {
             const response= await RestaurantFinder.get(`/${id}`);
-            console.log(response.data.data.restaurant.name);
-            setName(response.data.data.restaurant.name);
-            setLocation(response.data.data.restaurant.location);
-            setPriceRange(response.data.data.restaurant.price_range);
+            console.log(response.data.data.restaurants.name);
+            setName(response.data.data.restaurants.name);
+            setLocation(response.data.data.restaurants.location);
+            setPriceRange(response.data.data.restaurants.price_range);
         }
         fetchData();
     },[]);
@@ -36,6 +36,7 @@ export const UpdateRestaurant = (props) => {
 
     return (
     <div>
+        <h1>{name}</h1>
         <form action=''>
         <div className="form-group">
             <label htmlFor='name'>Name</label>
@@ -45,7 +46,7 @@ export const UpdateRestaurant = (props) => {
             <label htmlFor='location'>Location</label>
             <input value={location} onChange={(e)=> setLocation(e.target.value)} type="text" id="location" className="form-control"/>
         </div>
-        <div className="form-group">
+        <div className="form-group mb-3">
             <label htmlFor='price_range'>Price Range</label>
             <input value={price_range} onChange={(e)=> setPriceRange(e.target.value)} type="number" id="price_range" className="form-control"/>
         </div>
