@@ -19,7 +19,7 @@ export const RestaurantDetailPage = () => {
         console.log(err);
       }
     };
-
+ 
     fetchData();
   },[]);
 
